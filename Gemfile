@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8'
@@ -35,10 +35,9 @@ gem 'rspec_junit_formatter'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
   gem 'pry'
-  gem 'shoulda-matchers', '~> 5.0'
-  gem 'graphiql-rails'
+  gem 'shoulda-matchers'
+  
 end
 
 group :development do
@@ -50,6 +49,7 @@ end
 
 group :test do 
   gem 'simplecov'
+  gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'vcr'
   gem 'webmock'
