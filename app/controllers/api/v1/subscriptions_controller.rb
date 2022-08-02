@@ -12,7 +12,7 @@ class Api::V1::SubscriptionsController < ApplicationController
 
   def create
     if params[:email].present?
-      subscription = @customer.subscriptions.create(title: "#{@customer.first_name}'s Subscription to #{@tea.title}", price: number_to_currency(@tea.price), frequency: params[:frequency], customer_id: @customer.id)
+      subscription = @customer.subscriptions.create(title: "#{@tea.title} Subscription for #{@customer.first_name}", price: params[:price], frequency: params[:frequency], customer_id: @customer.id)
       tea_sub = TeaSub.create(tea_id: @tea.id, subscription_id: subscription.id)
       if subscription.save
         render json: SubscriptionSerializer.new(subscription), status: 201
