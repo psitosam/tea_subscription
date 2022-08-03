@@ -4,7 +4,7 @@ RSpec.describe 'subscriptions requests' do
 
   it 'create happy path returns new subscription info and status 201' do 
     customer = create :customer
-    tea = create(:tea, brewtime: "00:12:00") 
+    tea = create(:tea) 
     frequency = 1
     price = 10.0
     subscription_params = {
@@ -38,7 +38,7 @@ RSpec.describe 'subscriptions requests' do
   it 'create sad path returns 404 if not given valid data' do 
     # here we are leaving out frequency information which should cause the subscription to not be created on line 17 of the Controller.
     customer = create :customer
-    tea = create(:tea, brewtime: "00:14:00")
+    tea = create(:tea)
     price = 10.0
     subscription_params = {
       email: customer.email,
@@ -59,7 +59,7 @@ RSpec.describe 'subscriptions requests' do
   it 'happy path for update returns canceled subscription' do 
 
     customer = create :customer
-    tea = create(:tea, brewtime: "00:11:00") 
+    tea = create(:tea) 
     subscription = customer.subscriptions.create!(title: "#{tea.title} Subscription for #{customer.first_name}", price: 12.5, status: 0, frequency: 1)
     tea_sub = TeaSub.create!(tea_id: tea.id, subscription_id: subscription.id)
     payload = {
@@ -85,7 +85,7 @@ RSpec.describe 'subscriptions requests' do
 
   it 'sad path for update returns invalid request' do 
     customer = create :customer
-    tea = create(:tea, brewtime: "00:11:00") 
+    tea = create(:tea) 
     subscription = customer.subscriptions.create!(title: "#{tea.title} Subscription for #{customer.first_name}", price: 12.5, status: 0, frequency: 1)
     tea_sub = TeaSub.create!(tea_id: tea.id, subscription_id: subscription.id)
     payload = {
@@ -105,9 +105,9 @@ RSpec.describe 'subscriptions requests' do
   describe 'the index endpoint' do 
     before :each do 
       @customer = create :customer
-      @tea_1 = create(:tea, brewtime: "00:11:00") 
-      @tea_2 = create(:tea, brewtime: "00:12:00") 
-      @tea_3 = create(:tea, brewtime: "00:13:00") 
+      @tea_1 = create(:tea) 
+      @tea_2 = create(:tea) 
+      @tea_3 = create(:tea) 
       # active subscription 1
       @subscription_1 = @customer.subscriptions.create!(title: "#{@tea_1.title} Subscription for {@customer.first_name}", price: 12.5, status: 0, frequency: 1)
       @tea_sub_1 = TeaSub.create!(tea_id: @tea_1.id, subscription_id: @subscription_1.id)
