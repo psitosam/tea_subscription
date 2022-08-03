@@ -4,7 +4,7 @@ class Api::V1::SubscriptionsController < ApplicationController
 
   def index 
     if @customer != nil
-      render json: CustomerSubscriptionsSerializer.new(@customer.subscriptions)
+      render json: CustomerSerializer.new(@customer)
     else
       return invalid_request
     end 
