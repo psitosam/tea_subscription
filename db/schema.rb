@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_08_01_225524) do
     t.string "title"
     t.string "description"
     t.integer "temp"
-    t.time "brewtime"
+    t.integer "brewtime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
