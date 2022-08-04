@@ -168,7 +168,7 @@ $ rails s
 
 - get '/subscriptions', to: 'subscriptions#index'
 
-![index](<img width="1004" alt="get_subs" src="https://user-images.githubusercontent.com/95240894/182904179-ca613ab7-4fea-4aaf-8331-7c037a28dc6b.png">)
+![index](https://user-images.githubusercontent.com/95240894/182904179-ca613ab7-4fea-4aaf-8331-7c037a28dc6b.png)
 
    
 - post '/subscriptions', to: 'subscriptions#create'
