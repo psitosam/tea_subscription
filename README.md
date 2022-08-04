@@ -69,7 +69,7 @@ If Bundler is already installed or after it has been installed, run the followin
 $ bundle install
 ```
 
-There should be be verbose text diplayed of the installation process that looks similar to below. (this is not an actual copy of what will be output).
+There will be a long series of outputs that confirm the installation process of all the required Gems in the Gemfile and their versions, similar to what is below...
 
 ```shell
 $ bundle install
@@ -168,22 +168,22 @@ $ rails s
 
 - get '/subscriptions', to: 'subscriptions#index'
 
-![Screen Shot 2022-04-14 at 8 00 15 AM](https://user-images.githubusercontent.com/90224504/163386402-d6cccd85-be3b-4053-b12e-be21ea6253bb.png)
+![index](<img width="1004" alt="get_subs" src="https://user-images.githubusercontent.com/95240894/182904179-ca613ab7-4fea-4aaf-8331-7c037a28dc6b.png">)
 
-![Screen Shot 2022-04-14 at 8 00 40 AM](https://user-images.githubusercontent.com/90224504/163386458-f6a7bb99-572b-40da-9bb3-3bfb7d89e448.png)
    
 - post '/subscriptions', to: 'subscriptions#create'
 
-![Screen Shot 2022-04-14 at 8 06 39 AM](https://user-images.githubusercontent.com/90224504/163387328-6b39b0e7-f7f5-4f83-95d8-b1a28c27f72c.png)
+![create_sub](https://user-images.githubusercontent.com/95240894/182904382-70164caa-8fea-44ef-a131-28f0dd5673da.png)
+
 
 - patch '/subscriptions', to: 'subscriptions#update'
 
-![Screen Shot 2022-04-14 at 8 17 29 AM](https://user-images.githubusercontent.com/90224504/163388859-923e567f-32a2-4158-bfbe-fe7873f5c0ca.png)
+![update](https://user-images.githubusercontent.com/95240894/182904584-269cabe8-5842-48df-9bba-08901e0b4915.png)
 
 
-- ALL INVALID REQUESTS HANDLED WITH THIS RESPONSE FROM SERVER 
+- All Invalid Requests will generate the following response from the server: 
 
-![Screen Shot 2022-04-14 at 8 18 37 AM](https://user-images.githubusercontent.com/90224504/163389032-04dbb79c-9069-402a-85b1-d4038421afed.png)
+![invalid_request](https://user-images.githubusercontent.com/95240894/182905086-2fbb5210-34a9-403b-80e7-18b5826591d5.png)
 
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -196,7 +196,7 @@ $ rails s
     
   <tr>
       
-   <td align="center"><a href="https://github.com/psitosam"><img src="https://avatars.githubusercontent.com/u/90224504?s=400&u=b0c82b444d7708000e2747f860d4d2c3efb616cc&v=4" width="100px;" alt=""/><br /><sub><b>Seth (he/him)</b></sub></a><br /><a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Code">💻</a> <a href="#ideas-psitosam" title="Ideas, Planning, & Feedback">�</a> <a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Tests">⚠️</a> <a href="https://github.com/psitosam/tea_subscription/pulls?q=is%3Apr+reviewed-by%3psitosam" title="Reviewed Pull Requests">👀</a></td>
+   <td align="center"><a href="https://github.com/psitosam"><img src="https://avatars.githubusercontent.com/u/95240894?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Seth (he/him)</b></sub></a><br /><a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Code">💻</a> <a href="#ideas-psitosam" title="Ideas, Planning, & Feedback">�</a> <a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Tests">⚠️</a> <a href="https://github.com/psitosam/tea_subscription/pulls?q=is%3Apr+reviewed-by%3psitosam" title="Reviewed Pull Requests">👀</a></td>
       
     </tr>
    
