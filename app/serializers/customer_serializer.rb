@@ -7,4 +7,5 @@ class CustomerSerializer
              :address,
              :subscriptions
              
+ 
 end 

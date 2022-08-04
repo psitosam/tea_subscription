@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'subscriptions requests' do
 
-  it 'create happy path returns new subscription info and status 201' do 
+  it 'create happy path returns new subscription info and status 201', :vcr do 
     customer = create :customer
     tea = create(:tea) 
     frequency = 1
@@ -35,7 +35,7 @@ RSpec.describe 'subscriptions requests' do
     expect(subscription[:data][:attributes][:frequency]).to eq("bi_weekly")
   end 
 
-  it 'create sad path returns 404 if not given valid data' do 
+  it 'create sad path returns 404 if not given valid data', :vcr do 
     # here we are leaving out frequency information which should cause the subscription to not be created on line 17 of the Controller.
     customer = create :customer
     tea = create(:tea)
@@ -56,7 +56,7 @@ RSpec.describe 'subscriptions requests' do
     expect(subscription[:data][:message]).to eq("Invalid Request")
   end 
 
-  it 'happy path for update returns canceled subscription' do 
+  it 'happy path for update returns canceled subscription', :vcr do 
 
     customer = create :customer
     tea = create(:tea) 
@@ -83,7 +83,7 @@ RSpec.describe 'subscriptions requests' do
     expect(subscription[:data][:attributes][:status]).to eq("inactive")
   end 
 
-  it 'sad path for update returns invalid request' do 
+  it 'sad path for update returns invalid request', :vcr do 
     customer = create :customer
     tea = create(:tea) 
     subscription = customer.subscriptions.create!(title: "#{tea.title} Subscription for #{customer.first_name}", price: 12.5, status: 0, frequency: 1)
@@ -119,7 +119,7 @@ RSpec.describe 'subscriptions requests' do
       tea_sub_3 = TeaSub.create!(tea_id: @tea_3.id, subscription_id: @subscription_3.id)
     end 
     
-    it 'happy path for index action returns all subscriptions regardless of status' do 
+    it 'happy path for index action returns all subscriptions regardless of status', :vcr do 
 
       payload = {
         email: @customer.email
@@ -155,7 +155,7 @@ RSpec.describe 'subscriptions requests' do
       end 
     end
 
-    it 'sad path returns error message and 404' do 
+    it 'sad path returns error message and 404', :vcr do 
 
       payload = {
         email: @customer.first_name
