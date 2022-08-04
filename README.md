@@ -194,11 +194,11 @@ $ rails s
 
 <table>
     
-  <tr>
+  
       
-   <td align="center"><a href="https://github.com/psitosam"><img src="https://avatars.githubusercontent.com/u/95240894?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Seth (he/him)</b></sub></a><br /><a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Code">💻</a> <a href="#ideas-psitosam" title="Ideas, Planning, & Feedback">�</a> <a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Tests">⚠️</a> <a href="https://github.com/psitosam/tea_subscription/pulls?q=is%3Apr+reviewed-by%3psitosam" title="Reviewed Pull Requests">👀</a></td>
+   <td align="center"><a href="https://github.com/psitosam"><img src="https://avatars.githubusercontent.com/u/95240894?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Alex (he/him)</b></sub></a><br /><a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Code">💻</a> <a href="#ideas-psitosam" title="Ideas, Planning, & Feedback">�</a> <a href="https://github.com/psitosam/tea_subscription/commits?author=psitosam" title="Tests">⚠️</a> <a href="https://github.com/psitosam/tea_subscription/pulls?q=is%3Apr+reviewed-by%3psitosam" title="Reviewed Pull Requests">👀</a></td>
       
-    </tr>
+    
    
 </table>
 
