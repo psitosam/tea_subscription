@@ -25,3 +25,5 @@ subscription_2 = customer_1.subscriptions.create!(title: "#{customer_1.first_nam
 subscription_3 = customer_1.subscriptions.create!(title: "#{customer_1.first_name}'s Subscription for #{tea_3.title} tea", price: 14.0, status: 1, frequency: 2, customer_id: customer_1.id)
 
 tea_sub_1 = TeaSub.create!(tea_id: tea_1.id, subscription_id: subscription_1.id)
+tea_sub_2 = TeaSub.create!(tea_id: tea_2.id, subscription_id: subscription_2.id)
+tea_sub_3 = TeaSub.create!(tea_id: tea_3.id, subscription_id: subscription_3.id)
