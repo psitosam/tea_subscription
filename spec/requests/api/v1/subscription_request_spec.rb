@@ -137,18 +137,17 @@ RSpec.describe 'subscriptions requests' do
       expect(reply[:data]).to have_key :attributes
       expect(reply[:data][:type]).to eq("customer")
       expect(reply[:data][:attributes]).to be_a Hash
-      expect(reply[:data][:attributes]).to have_key :first_name
-      expect(reply[:data][:attributes]).to have_key :last_name
-      expect(reply[:data][:attributes]).to have_key :email
-      expect(reply[:data][:attributes]).to have_key :address
-      expect(reply[:data][:attributes]).to have_key :subscriptions
-      expect(reply[:data][:attributes][:subscriptions]).to be_a Array
-      reply[:data][:attributes][:subscriptions].each do |sub|
-        expect(sub).to have_key :id
-        expect(sub).to have_key :title
-        expect(sub).to have_key :price
-        expect(sub).to have_key :status
-        expect(sub).to have_key :frequency
+      expect(reply[:data][:attributes]).to have_key :customer_name
+      expect(reply[:data][:attributes]).to have_key :customer_email
+      expect(reply[:data][:attributes]).to have_key :customer_address
+      expect(reply[:data]).to have_key :subscriptions
+      expect(reply[:data][:subscriptions]).to be_a Array
+      reply[:data][:subscriptions].each do |sub|
+        expect(sub).to have_key :subscription_id
+        expect(sub).to have_key :tea
+        expect(sub).to have_key :subscription_price
+        expect(sub).to have_key :subscription_status
+        expect(sub).to have_key :subscription_freq
         expect(sub).to have_key :customer_id
         expect(sub).to have_key :created_at
         expect(sub).to have_key :updated_at
