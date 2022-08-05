@@ -7,5 +7,9 @@ class SubscriptionSerializer
              :price,
              :status,
              :frequency
-
+  
+  attribute :tea_ids do |object|
+    object.tea_ids
+  end
+  
 end 
