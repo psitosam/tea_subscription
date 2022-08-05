@@ -154,6 +154,11 @@ Before using the web application you will need to setup your databases locally b
 $ rails db:{drop,create,migrate,seed}
 ```
 
+That should generate the following 
+
+## Schema:
+
+![TeaSchema](https://user-images.githubusercontent.com/95240894/183147993-2fd8a87d-0efd-4ab9-b58d-409065aebc44.png)
 
 5. Startup and Access<br>
 Finally, in order to use the web app you will have to start the server locally and access the app through a web browser. 
