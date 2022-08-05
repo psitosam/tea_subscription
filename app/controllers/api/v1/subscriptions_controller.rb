@@ -4,7 +4,8 @@ class Api::V1::SubscriptionsController < ApplicationController
 
   def index 
     if @customer != nil
-      render json: CustomerSerializer.new(@customer)
+      @subscriptions = @customer.subscriptions
+      render json: CustomerSerializer.get_subscriptions(@customer, @subscriptions)
     else
       return invalid_request
     end 
@@ -15,7 +16,7 @@ class Api::V1::SubscriptionsController < ApplicationController
       subscription = @customer.subscriptions.create(title: "#{@tea.title} Subscription for #{@customer.first_name}", price: params[:price], frequency: params[:frequency], customer_id: @customer.id)
       tea_sub = TeaSub.create(tea_id: @tea.id, subscription_id: subscription.id)
       if subscription.save
-        render json: SubscriptionSerializer.new(subscription), status: 201
+        render json: SubscriptionSerializer.new(subscription, tea_sub), status: 201
       else
         return invalid_request
       end 
